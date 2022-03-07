@@ -20,7 +20,3 @@ Shows an admin page `Dashboard > Documentation` for all users with `edit_pages`.
 
 1.0.0
 - initial release
-
-
-## Resources ##
-https://rudrastyh.com/wordpress/creating-options-pages.html

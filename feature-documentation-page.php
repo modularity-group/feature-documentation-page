@@ -113,3 +113,5 @@ function feature_documentation_page(){
   $content = get_option( 'feature_documentation_page__content' );
   echo '<div class="wrap"><h1>Dokumentation</h1>'.html_entity_decode($content).'</div>';
 }
+
+// https://rudrastyh.com/wordpress/creating-options-pages.html
