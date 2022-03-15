@@ -42,7 +42,7 @@ add_action( 'admin_init',  function(){
 
 	add_settings_field(
 		'feature_documentation_page__content',
-		'',
+		'Content',
 		'feature_documentation_page__content__fieldhtml', // function which prints the field
 		'documentation-page-settings', // page slug
 		'settings_section_main', // section ID
@@ -55,19 +55,19 @@ add_action( 'admin_init',  function(){
 } );
 
 function feature_documentation_page__sanitizecontent($content){
-  $content = sanitize_text_field( htmlentities($content) );
+  $content = wp_filter_post_kses( $content );
   return $content;
 }
 
 function feature_documentation_page__content__fieldhtml(){
 	$content = get_option( 'feature_documentation_page__content' );
   wp_editor(
-    html_entity_decode($content),
+    $content,
     'feature_documentation_page__content',
     $settings = array(
       'media_buttons' => false,
       'drag_drop_upload' => false,
-      'textarea_rows' => '50',
+      'textarea_rows' => '25',
       'wpautop' => false
       )
   );
