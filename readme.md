@@ -4,7 +4,7 @@ Allow Admins & Developers to add a richtext documentation page for all authors a
 
 ---
 
-Version: 1.0.1
+Version: 1.1.0
 
 Author: Matze @ https://modularity.group
 
@@ -17,6 +17,9 @@ Add an options page `Modules > Documentation Page` with a WYSIWYG-Editor field f
 Shows an admin page `Dashboard > Documentation` for all users with `edit_pages`.
 
 ---
+
+1.1.0 
+- wp_kses_post() for content-field sanitization instead if wp_filter_post_kses()
 
 1.0.1
 - fix content sanitization

@@ -55,7 +55,7 @@ add_action( 'admin_init',  function(){
 } );
 
 function feature_documentation_page__sanitizecontent($content){
-  $content = wp_filter_post_kses( $content );
+  $content = wp_kses_post($content);
   return $content;
 }
 
